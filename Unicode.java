@@ -68,7 +68,12 @@ public class Unicode {
 			continue;
 		    }
 		    
-		    System.out.println("\t| \'\\u" + tuple.left + "\'..\'\\u" + tuple.right + "\'");
+		    System.out.print("\t| \'\\u");
+		    if (tuple.left.equals(tuple.right)) {
+			System.out.println(tuple.left + "\'");
+		    } else {
+			System.out.println(tuple.left + "\'..\'\\u" + tuple.right + "\'");
+		    }
 		}
 		System.out.println("\t;");
 		System.out.println();
